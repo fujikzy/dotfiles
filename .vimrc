@@ -1,13 +1,21 @@
-"プラグイン管理vundle
-set rtp+=~/.vim/vundle/ 
-call vundle#rc()
-filetype plugin on
+"プラグイン管理NeoVundle
+set nocompatible
+filetype plugin indent off
 
-"利用中プラグイン BundleSearch→BundleInstall
-Bundle 'YankRing.vim'
-Bundle 'The-NERD-Commenter'
-Bundle 'neocomplcache'
-Bundle 'html5.vim'
+if has('vim_starting')
+    set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
+    call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
+endif
+
+NeoBundle 'YankRing.vim'
+NeoBundle 'The-NERD-Commenter'
+NeoBundle 'neocomplcache'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'nanotech/jellybeans.vim'
+" 削除後に:NeoBundleClean
+
+filetype plugin on
+NeoBundleCheck "vim起動時に自動インストール
 
 "NERDCommenter
 "\c<space>でコメントアウト
@@ -46,7 +54,8 @@ set smartcase         "検索文字列に大文字が含まれる場合は区別
 "カラー表示
 syntax on             "syntaxを有効
 set t_Co=256          "256色対応
-colorscheme wombat256 "カラースキーマ設定
+"let g:hybrid_use_Xresources = 1
+colorscheme hybrid    "カラースキーマ設定
 
 "プログラミング系
 set smartindent                              "オートインデント
