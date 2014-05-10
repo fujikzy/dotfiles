@@ -7,18 +7,18 @@ if has('vim_starting')
     call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
 endif
 
+NeoBundleFetch 'Shougo/neobundle.vim'
+
 NeoBundle 'YankRing.vim'
 NeoBundle 'The-NERD-Commenter'
 NeoBundle 'neocomplcache'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'nanotech/jellybeans.vim'
-" 削除後に:NeoBundleClean
+"削除後に:NeoBundleClean
 
 filetype plugin on
-NeoBundleCheck "vim起動時に自動インストール
-
-"NERDCommenter
-"\c<space>でコメントアウト
+"vim起動時に自動インストール
+NeoBundleCheck
 
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
@@ -55,7 +55,7 @@ set smartcase         "検索文字列に大文字が含まれる場合は区別
 syntax on             "syntaxを有効
 set t_Co=256          "256色対応
 "let g:hybrid_use_Xresources = 1
-colorscheme hybrid    "カラースキーマ設定
+"colorscheme hybrid    "カラースキーマ設定
 
 "プログラミング系
 set smartindent                              "オートインデント
