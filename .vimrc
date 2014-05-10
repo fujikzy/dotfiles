@@ -9,11 +9,11 @@ call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'YankRing.vim'
-NeoBundle 'The-NERD-Commenter'
-NeoBundle 'neocomplcache'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'nanotech/jellybeans.vim'
+"NeoBundle 'YankRing.vim'
+"NeoBundle 'The-NERD-Commenter'
+"NeoBundle 'neocomplcache'
+"NeoBundle 'w0ng/vim-hybrid'
+"NeoBundle 'nanotech/jellybeans.vim'
 "削除後に:NeoBundleClean
 
 filetype plugin indent on
