@@ -55,7 +55,7 @@ set smartcase         "検索文字列に大文字が含まれる場合は区別
 syntax on             "syntaxを有効
 set t_Co=256          "256色対応
 "let g:hybrid_use_Xresources = 1
-"colorscheme hybrid    "カラースキーマ設定
+colorscheme hybrid    "カラースキーマ設定
 
 "プログラミング系
 set smartindent                              "オートインデント
