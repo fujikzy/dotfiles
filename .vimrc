@@ -1,11 +1,11 @@
-"プラグイン管理NeoVundle
-set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
+    set nocompatible
     set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
-    call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
 endif
+
+call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -16,9 +16,8 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'nanotech/jellybeans.vim'
 "削除後に:NeoBundleClean
 
-filetype plugin on
-"vim起動時に自動インストール
-NeoBundleCheck
+filetype plugin indent on
+NeoBundleCheck "vim起動時に自動インストール
 
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
