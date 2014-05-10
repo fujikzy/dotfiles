@@ -15,7 +15,6 @@ NeoBundle 'neocomplcache'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'nanotech/jellybeans.vim'
 "削除後に:NeoBundleClean
-"
 
 filetype plugin indent on
 NeoBundleCheck "vim起動時に自動インストール
