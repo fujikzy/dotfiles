@@ -14,6 +14,8 @@ NeoBundle 'The-NERD-Commenter'
 NeoBundle 'neocomplcache'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
 "削除後に:NeoBundleClean
 
 filetype plugin indent on
@@ -58,7 +60,7 @@ colorscheme hybrid    "カラースキーマ設定
 
 "プログラミング系
 set smartindent                              "オートインデント
-set tabstop=4 shiftwidth=4 softtabstop=0     "インデント幅
-"set expandtab                                "タブの代わりに空白挿入
+set tabstop=4 shiftwidth=4 softtabstop=4     "インデント幅
+set expandtab                                "タブの代わりに空白挿入
 set showmatch                                "括弧入力時に対応する括弧表示
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif  "前回の終了時の行で起動
