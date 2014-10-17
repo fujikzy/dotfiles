@@ -24,6 +24,7 @@ NeoBundleCheck "vim起動時に自動インストール
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 
+nnoremap <silent> <Leader>o :<C-u>Unite -vertical -no-quit -winwidth=40 outline<CR>
 
 set nocompatible "vim非互換モード
 filetype off
