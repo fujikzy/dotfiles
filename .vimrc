@@ -58,6 +58,7 @@ syntax on             "syntaxを有効
 set t_Co=256          "256色対応
 "let g:hybrid_use_Xresources = 1
 colorscheme hybrid    "カラースキーマ設定
+highlight LineNr ctermfg=grey
 
 "プログラミング系
 set smartindent                              "オートインデント
