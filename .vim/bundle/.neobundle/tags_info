@@ -3,6 +3,7 @@ YankRing.vim
 jellybeans.vim
 neobundle.vim
 neocomplcache
+nerdtree
 unite-outline
 unite.vim
 vim-hybrid

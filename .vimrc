@@ -16,6 +16,7 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
+NeoBundle 'scrooloose/nerdtree'
 "削除後に:NeoBundleClean
 
 filetype plugin indent on
@@ -25,6 +26,7 @@ NeoBundleCheck "vim起動時に自動インストール
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 
 nnoremap <silent> <Leader>o :<C-u>Unite -vertical -no-quit -winwidth=40 outline<CR>
+nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 
 set nocompatible "vim非互換モード
 filetype off
