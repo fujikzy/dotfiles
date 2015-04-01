@@ -25,6 +25,9 @@ NeoBundleCheck "vim起動時に自動インストール
 "neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 
+set clipboard+=unnamed
+set clipboard+=autoselect
+
 nnoremap <silent> <Leader>o :<C-u>Unite -vertical -no-quit -winwidth=40 outline<CR>
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 
@@ -56,11 +59,11 @@ set ignorecase        "検索文字列が小文字の場合は大文字小文字
 set smartcase         "検索文字列に大文字が含まれる場合は区別する
 
 "カラー表示
-syntax on             "syntaxを有効
-set t_Co=256          "256色対応
+"syntax on             "syntaxを有効
+"set t_Co=256          "256色対応
 "let g:hybrid_use_Xresources = 1
-colorscheme hybrid    "カラースキーマ設定
-highlight LineNr ctermfg=grey
+"colorscheme hybrid    "カラースキーマ設定
+"highlight LineNr ctermfg=grey
 
 "プログラミング系
 set smartindent                              "オートインデント
@@ -68,3 +71,7 @@ set tabstop=4 shiftwidth=4 softtabstop=4     "インデント幅
 set expandtab                                "タブの代わりに空白挿入
 set showmatch                                "括弧入力時に対応する括弧表示
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif  "前回の終了時の行で起動
+
+"自動的にファイルを読み込むパス
+set runtimepath+=~/.vim/
+runtime! userautoload/*.vim
